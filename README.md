@@ -1,36 +1,51 @@
-import tkinter as tk
-from tkinter import messagebox
-import yfinance as yf
-def get_stock():
-symbol = entry.get().upp
-    
-Company : {info.get('longName', 'N/A')}
+# Real-Time Stock Market Dashboard
 
-Current Price : {info.get('currentPrice', 'N/A')}
+A Python-based Real-Time Stock Market Dashboard that allows users to monitor live stock market data through a simple and interactive interface. The application fetches real-time stock information using the Yahoo Finance API (yfinance) and displays key market details such as the current price, opening price, previous close, daily high/low, and market capitalization.
+# Features
 
-Previous Close : {info.get('previousClose', 'N/A')}
+- Real-time stock market data
+- Search stocks using ticker symbols (e.g., AAPL, MSFT, TSLA, RELIANCE.NS)
+- Displays company information and key financial metrics
+- User-friendly graphical interface built with Tkinter
+- Fast and lightweight Python application
+- Easy to customize and extend
 
-Open Price : {info.get('open', 'N/A')}
+# Technologies Used
 
-Day High : {info.get('dayHigh', 'N/A')}
+- Python
+- Tkinter
+- yfinance
+- Pandas
 
-Day Low : {info.get('dayLow', 'N/A')}
+📌 How to Run
 
-Market Cap : {info.get('marketCap', 'N/A')}
-"""
-        )
-    except:
-messagebox.showerror("Error", "Invalid Stock Symbol")
-root = tk.Tk()
-root.title("Real-Time Stock Market Dashboard")
-root.geometry("500x400")
-title = tk.Label(root, text="Stock Market Dashboard", font=("Arial", 18, "bold"))
-title.pack(pady=10)
-entry = tk.Entry(root, font=("Arial", 14))
-entry.pack(pady=10)
-entry.insert(0, "AAPL")
-button = tk.Button(root, text="Get Stock Data", command=get_stock)
-button.pack(pady=10)
-result = tk.Label(root, text="", justify="left", font=("Arial", 12))
-result.pack(pady=10)
-root.mainloop()
+1. Clone this repository.
+2. Install the required libraries:
+   pip install yfinance pandas
+3. Run the application:
+   python app.py
+
+# Output
+
+The dashboard displays:
+
+- Company Name
+- Current Stock Price
+- Opening Price
+- Previous Close
+- Day High
+- Day Low
+- Market Capitalization
+
+# Future Enhancements
+
+- Live auto-refresh
+- Interactive price charts
+- Watchlist feature
+- Portfolio tracking
+- Export stock data to CSV
+- Technical indicators (Moving Average, RSI, MACD)
+
+# Author
+Shivam Chauhan
+If you found this project helpful, feel free to ⭐ star the repository and contribute with improvements.
